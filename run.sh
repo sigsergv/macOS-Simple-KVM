@@ -18,7 +18,7 @@ qemu-system-x86_64 \
     -drive if=pflash,format=raw,file="$OVMF/OVMF_VARS-1024x768-copy.fd" \
     -vga qxl \
     -device ich9-intel-hda -device hda-output \
-    -usb -device usb-kbd -device usb-mouse \
+    -usb -device usb-kbd -device usb-tablet \
     -drive id=ESP,if=none,format=qcow2,file=ESP.qcow2 \
     -netdev bridge,id=net0,br=br0,"helper=/usr/lib/qemu/qemu-bridge-helper" \
     -device e1000-82545em,netdev=net0,id=net0,mac=52:54:00:AB:B4:81 \
